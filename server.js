@@ -28,7 +28,7 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
 
 //importing static files
-app.use(express.static(path.join(__dirname,"./clien/build")));
+app.use(express.static(path.join(__dirname,"./client/build")));
 
 app.get('*',function(req,res){
   res.sendFile(path.join(__dirname,'./client/build/index.html'));
